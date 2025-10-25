@@ -8,8 +8,8 @@
     "compile": "npx hardhat compile",
     "deploy:base": "npx hardhat run scripts/deploy.js --network base",
     "deploy:basesepolia": "npx hardhat run scripts/deploy.js --network basesepolia",
-    "verify:base": "npx hardhat verify --network base",
-    "verify:basesepolia": "npx hardhat verify --network basesepolia",
+    "verify:base": "npx hardhat run scripts/verify.js --network base",
+    "verify:basesepolia": "npx hardhat run scripts/verify.js --network basesepolia",
     "clean": "npx hardhat clean",
     "node": "npx hardhat node"
   },
@@ -24,7 +24,8 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.4.0",
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "solc": "^0.8.20"
   },
   "type": "module"
 }
